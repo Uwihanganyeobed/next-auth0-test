@@ -8,15 +8,15 @@ const Home = () => {
   const { push } = useRouter();
   const { isLoading, user, error } = useUser();
   const toast = useToast();
-  
+
   useEffect(() => {
     if (user) {
       toast({
         title: `Welcome ${user.name}`,
         description: "Successfully logged in",
-        status: 'success',
+        status: "success",
         duration: 5000,
-        position: 'top-right',
+        position: "top-right",
         isClosable: true,
       });
     }
@@ -32,9 +32,9 @@ const Home = () => {
     toast({
       title: "Logging Out",
       description: "Successfully logged out",
-      status: 'success',
+      status: "success",
       duration: 5000,
-      position: 'top-right',
+      position: "top-right",
       isClosable: true,
     });
     push("/api/auth/logout");
@@ -46,9 +46,12 @@ const Home = () => {
         <>
           <Heading>Hello {user.name}</Heading>
           <Button onClick={handleLogout}>Logout</Button>
+
         </>
       ) : (
-        <Button onClick={handleLogin}>Login</Button>
+        <div>
+          <Button onClick={handleLogin}>Login</Button>
+        </div>
       )}
     </>
   );
