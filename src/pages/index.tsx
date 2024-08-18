@@ -1,3 +1,5 @@
+
+
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { Button, Heading } from "@chakra-ui/react";
 import { useRouter } from "next/router";
@@ -58,3 +60,18 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+// import React from 'react'
+// import Propz from '../components/PropzTest'
+
+// const Home = () => {
+//   return (
+//     <div>
+//       <Propz />
+//     </div>
+//   )
+// }
+
+// export default Home
