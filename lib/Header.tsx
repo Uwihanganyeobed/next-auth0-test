@@ -1,6 +1,7 @@
 import React from "react";
+import CountUp from "react-countup";
 
-const HeaderTest = ({ title, description, amount, marks }: any) => {
+const Header = ({ title, description, amount, marks }: any) => {
   return (
     <div>
       <h1>Hey, {title}</h1>
@@ -14,12 +15,17 @@ const HeaderTest = ({ title, description, amount, marks }: any) => {
           {marks && (
             <div>
               List of marks
-              {marks.map((mark,id) =>(
-               <ol key={id}>
-                  <p>{mark?.name}</p>
-                  <p>{mark?.math}</p>
-                  <p>{mark?.CSC}</p>
-               </ol>
+              {marks.map((mark, id) => (
+                <ol key={id}>
+                  <p style={{textDecoration: 'underline'}}>{mark?.name}</p>
+                  <h2>Math Scores:  {<
+                    CountUp
+                    duration={2}
+                    decimal="."
+                    decimals={3}
+                    end={mark?.math} />}</h2>
+                  <h3>CSC Scrores: {<CountUp end={mark?.CSC} />}</h3>
+                </ol>
               ))}
             </div>
           )}

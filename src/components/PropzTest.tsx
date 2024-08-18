@@ -4,18 +4,18 @@ import Header from '../../lib/Header'
  const marks =[
    {
       name: "Obed",
-      math: 100,
-      CSC: 20
+      math: 1000,
+      CSC: 2000
    },
    {
       name: "Vargas",
-      math: 200,
-      CSC: 200
+      math: 2000,
+      CSC: 2000
    }
    , {
       name: "Mayor",
-      math: 10,
-      CSC: 204
+      math: 1000,
+      CSC: 2040
    }
 ]
 const Propz = () => {
